@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.university.project_1_2.presentation.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_saveFragment"
+            app:destination="@id/saveFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gdetailFragment"
+            app:destination="@id/gdetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_glistRandFragment"
+            app:destination="@id/glistRandFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_glistAdvFragment"
+            app:destination="@id/glistAdvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveFragment"
+        android:name="com.university.project_1_2.presentation.fragments.SaveFragment"
+        android:label="fragment_save"
+        tools:layout="@layout/fragment_save" >
+        <action
+            android:id="@+id/action_saveFragment_to_sdetailFragment"
+            app:destination="@id/sdetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.university.project_1_2.presentation.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_hdetailFragment"
+            app:destination="@id/hdetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hdetailFragment"
+        android:name="com.university.project_1_2.presentation.fragments.HdetailFragment"
+        android:label="fragment_hdetail"
+        tools:layout="@layout/fragment_hdetail" >
+        <argument
+            android:name="hID"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/sdetailFragment"
+        android:name="com.university.project_1_2.presentation.fragments.SdetailFragment"
+        android:label="fragment_sdetail"
+        tools:layout="@layout/fragment_sdetail" >
+        <argument
+            android:name="sID"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_sdetailFragment_to_saveFragment"
+            app:destination="@id/saveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gdetailFragment"
+        android:name="com.university.project_1_2.presentation.fragments.GdetailFragment"
+        android:label="fragment_gdetail"
+        tools:layout="@layout/fragment_gdetail" >
+        <argument
+            android:name="thereIsData"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_gdetailFragment_to_glistRandFragment"
+            app:destination="@id/glistRandFragment" />
+        <argument
+            android:name="ID"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_gdetailFragment_to_glistAdvFragment"
+            app:destination="@id/glistAdvFragment" />
+        <argument
+            android:name="thereIsList"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/glistRandFragment"
+        android:name="com.university.project_1_2.presentation.fragments.GlistRandFragment"
+        android:label="fragment_glist_rand"
+        tools:layout="@layout/fragment_glist_rand" >
+        <action
+            android:id="@+id/action_glistRandFragment_to_gdetailFragment"
+            app:destination="@id/gdetailFragment" />
+        <argument
+            android:name="isNew"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/glistAdvFragment"
+        android:name="com.university.project_1_2.presentation.fragments.GlistAdvFragment"
+        android:label="fragment_glist_adv"
+        tools:layout="@layout/fragment_glist_adv" >
+        <action
+            android:id="@+id/action_glistAdvFragment_to_gdetailFragment"
+            app:destination="@id/gdetailFragment" />
+        <argument
+            android:name="isTen"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="isNewAdv"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+</navigation>

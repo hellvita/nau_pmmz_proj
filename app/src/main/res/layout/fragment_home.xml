@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bcg_cl1"
+    tools:context=".presentation.fragments.HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/imBcgSdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.4"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_bcg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSDetail"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/bcg_cl2"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/bGenerate"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/btn_cl7"
+                android:fontFamily="@font/autour_one"
+                android:text="@string/generate_str"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_cl1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBtn1Btns"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#8BC6AFC1"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/cvSDetail"
+        app:layout_constraintStart_toStartOf="@+id/cvSDetail"
+        app:layout_constraintTop_toBottomOf="@+id/cvSDetail"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/cvSDetail"
+            app:layout_constraintStart_toStartOf="@+id/cvSDetail"
+            app:layout_constraintTop_toBottomOf="@+id/cvSDetail">
+
+            <Button
+                android:id="@+id/bRandom"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:backgroundTint="@color/btn_cl8"
+                android:fontFamily="@font/autour_one"
+                android:text="@string/random_str"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_cl2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/bByKeyWord"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:backgroundTint="@color/btn_cl8"
+                android:fontFamily="@font/autour_one"
+                android:text="@string/byKeyWord_str"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_cl2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/bRandom"
+                app:layout_constraintStart_toStartOf="@+id/bRandom"
+                app:layout_constraintTop_toBottomOf="@+id/bRandom" />
+
+            <Button
+                android:id="@+id/bGenerate10unpressed"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/btn_inactive"
+                android:fontFamily="@font/autour_one"
+                android:text="@string/ten_str"
+                android:textColor="@color/txt_cl3"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/bByKeyWord"
+                app:layout_constraintStart_toStartOf="@+id/bByKeyWord"
+                app:layout_constraintTop_toBottomOf="@+id/bByKeyWord"
+                tools:visibility="gone" />
+
+            <Button
+                android:id="@+id/bGenerate10pressed"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/btn_active"
+                android:fontFamily="@font/autour_one"
+                android:text="@string/ten_str"
+                android:textColor="@color/txt_cl3"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/bByKeyWord"
+                app:layout_constraintStart_toStartOf="@+id/bByKeyWord"
+                app:layout_constraintTop_toBottomOf="@+id/bByKeyWord"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBtn2"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/bcg_cl2"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/cvBtn1Btns"
+        app:layout_constraintStart_toStartOf="@+id/cvBtn1Btns"
+        app:layout_constraintTop_toBottomOf="@+id/cvBtn1Btns">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/bSaved"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/btn_cl7"
+                android:fontFamily="@font/autour_one"
+                android:text="@string/saved_str"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_cl1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBtn3"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/bcg_cl2"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/cvBtn2"
+        app:layout_constraintStart_toStartOf="@+id/cvBtn2"
+        app:layout_constraintTop_toBottomOf="@+id/cvBtn2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/bHistory"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/btn_cl7"
+                android:fontFamily="@font/autour_one"
+                android:text="@string/history_str"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_cl1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">project_1_2</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ten_str">10</string>
+    <string name="generate_str">Generate quote</string>
+    <string name="random_str">random</string>
+    <string name="byKeyWord_str">by key word</string>
+    <string name="byAnime_str">by anime</string>
+    <string name="byCharacter_str">by character</string>
+    <string name="saved_str">Saved</string>
+    <string name="history_str">History</string>
+    <string name="nosaved_str">There\'re no saved quotes yet</string>
+    <string name="nohistory_str">There\'s no history</string>
+    <string name="key_word_anime">A</string>
+    <string name="key_word_character">C</string>
+</resources>
